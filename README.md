@@ -24,17 +24,25 @@ resources:
   - url: /local/animated-background.js
     type: module
 animated_background:
-  default_url: /local/animated-background/background-animations/sunny.html
+  default_url: /local/animated-background/background-animations/clear-day.html
   included_users:
     - Villhellm
+  sun: sun.sun
   entity: "weather.dark_sky"
   state_url:
-      'sunny': /local/animated-background/background-animations/sunny.html
-      'partlycloudy': /local/animated-background/background-animations/cloudy.html
-      'cloudy': /local/animated-background/background-animations/cloudy.html
-      'mostlycloudy': /local/animated-background/background-animations/mostlycloudy.html
-      'clear-night': /local/animated-background/background-animations/night.html
-      'fog': /local/animated-background/background-animations/fog.html
+      'clear-day': /community_plugin/lovelace-animated-background/background-animations/clear-day.html
+      'clear-night': /community_plugin/lovelace-animated-background/background-animations/clear-night.html
+      'cloudy-day': /community_plugin/lovelace-animated-background/background-animations/cloudy-day.html
+      'cloudy-night': /community_plugin/lovelace-animated-background/background-animations/cloudy-night.html
+      'fog-day': /community_plugin/lovelace-animated-background/background-animations/fog-day.html
+      'partly-cloudy-day': /community_plugin/lovelace-animated-background/background-animations/partly-cloudy-day.html
+      'partly-cloudy-night': /community_plugin/lovelace-animated-background/background-animations/partly-cloudy-night.html
+      'rain-day': /community_plugin/lovelace-animated-background/background-animations/rain-day.html
+      'rain-night': /community_plugin/lovelace-animated-background/background-animations/rain-day.html
+      'snow-day': /community_plugin/lovelace-animated-background/background-animations/snow-day.html
+      'snow-night': /community_plugin/lovelace-animated-background/background-animations/snow-night.html
+      'wind-day': /community_plugin/lovelace-animated-background/background-animations/wind-day.html
+      'wind-night': /community_plugin/lovelace-animated-background/background-animations/wind-night.html
 ```
 
 ## Installation Method 2: HACS
@@ -52,17 +60,25 @@ resources:
   - url: /community_plugin/lovelace-animated-background/animated-background.js
     type: module
 animated_background:
-  default_url: /community_plugin/lovelace-animated-background/background-animations/sunny.html
+  default_url: /community_plugin/lovelace-animated-background/background-animations/clear-day.html
   included_users:
     - Villhellm
+  sun: sun.sun
   entity: "weather.dark_sky"
   state_url:
-      'sunny': /community_plugin/lovelace-animated-background/background-animations/sunny.html
-      'partlycloudy': /community_plugin/lovelace-animated-background/background-animations/cloudy.html
-      'cloudy': /community_plugin/lovelace-animated-background/background-animations/cloudy.html
-      'mostlycloudy': /community_plugin/lovelace-animated-background/background-animations/mostlycloudy.html
-      'clear-night': /community_plugin/lovelace-animated-background/background-animations/night.html
-      'fog': /community_plugin/lovelace-animated-background/background-animations/fog.html
+      'clear-day': /community_plugin/lovelace-animated-background/background-animations/clear-day.html
+      'clear-night': /community_plugin/lovelace-animated-background/background-animations/clear-night.html
+      'cloudy-day': /community_plugin/lovelace-animated-background/background-animations/cloudy-day.html
+      'cloudy-night': /community_plugin/lovelace-animated-background/background-animations/cloudy-night.html
+      'fog-day': /community_plugin/lovelace-animated-background/background-animations/fog-day.html
+      'partly-cloudy-day': /community_plugin/lovelace-animated-background/background-animations/partly-cloudy-day.html
+      'partly-cloudy-night': /community_plugin/lovelace-animated-background/background-animations/partly-cloudy-night.html
+      'rain-day': /community_plugin/lovelace-animated-background/background-animations/rain-day.html
+      'rain-night': /community_plugin/lovelace-animated-background/background-animations/rain-day.html
+      'snow-day': /community_plugin/lovelace-animated-background/background-animations/snow-day.html
+      'snow-night': /community_plugin/lovelace-animated-background/background-animations/snow-night.html
+      'wind-day': /community_plugin/lovelace-animated-background/background-animations/wind-day.html
+      'wind-night': /community_plugin/lovelace-animated-background/background-animations/wind-night.html
 ```
 
 # Configuration
@@ -80,7 +96,10 @@ Configuration for Animated Background goes into the root of your Lovelace config
 | included_devices | list | **Optional** | List of devices that will display animated background. If this option is set any devices not included in this list will be excluded.
 | excluded_users | list | **Optional** | Users to be excluded
 | excluded_devices | list | **Optional** | Devices to be excluded
+| sun | string | **Optional** | Entity to check for sun position
 
 While all entries are optional, it is recommended to at least set `default_url` or `entity` with `state_url`. Without one of those set you would never know this plugin was installed. 
+
+Get more Cinemagraphs from [Flixel](https://flixel.com/cinemagraphs/fresh)
 
 [Troubleshooting](https://github.com/thomasloven/hass-config/wiki/Lovelace-Plugins)

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Cloudy</title>
+  <title>Rainy Day</title>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
@@ -40,13 +40,13 @@
       return Math.floor(Math.random() * (max - min + 1) + min);
     }
     var cinemagraphs = [
-      "https://cdn.flixel.com/flixel/13e0s6coh6ayapvdyqnv.hd.mp4",
-      "https://cdn.flixel.com/flixel/aorl3skmssy7udwopk22.hd.mp4",
-      "https://cdn.flixel.com/flixel/qed6wvf2igukiioykg3r.hd.mp4",
-      "https://cdn.flixel.com/flixel/3rd72eezaj6d23ahlo7y.hd.mp4",
-      "https://cdn.flixel.com/flixel/9m11gd43m6qn3y93ntzp.hd.mp4",
-      "https://cdn.flixel.com/flixel/hrkw2m8eofib9sk7t1v2.hd.mp4",
-      "https://cdn.flixel.com/flixel/thin_brige_over_water_overcast.mp4"
+      "https://cdn.flixel.com/flixel/qti3s5st0srowd9krhcw.hd.mp4",
+      "https://cdn.flixel.com/flixel/tvn9ugchid10urpe1d2c.hd.mp4",
+      "https://cdn.flixel.com/flixel/chrgj6raf5q3s6y2so7z.hd.mp4", //thunder
+      "https://cdn.flixel.com/flixel/mgcpkve3xzp5nwj7rq3y.hd.mp4", //thunder
+      "https://cdn.flixel.com/flixel/j6txa6307zgmk4olaykl.hd.mp4" //thunder
+
+
     ];
     document.getElementById("cinemagraph").setAttribute("src", cinemagraphs[randomIntFromInterval(0, cinemagraphs.length - 1)]); 
   </script>

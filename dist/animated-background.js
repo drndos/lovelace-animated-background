@@ -68,6 +68,18 @@ function renderBackgroundHTML(hass) {
   var stateURL = "";
   if (animatedConfig.entity) {
     var current_state = hass.states[animatedConfig.entity].state;
+    var day_night = "day";
+    if(animatedConfig.sun)
+    {
+      if(hass.states[animatedConfig.sun].state === "below_horizon")
+      {
+        day_night = "night";
+      }
+    }
+    if(current_state.indexOf("day") === -1 && current_state.indexOf("night") === -1)
+    {
+      current_state = current_state + "-" + day_night;
+    }
     if (previous_state != current_state) {
       console.log(current_state);
 
